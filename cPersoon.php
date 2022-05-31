@@ -6,6 +6,7 @@ class cPersoon extends cClubInfo
     private $lastname;
     public $age;
     public $gender;
+    public $fullname;
 
     public function __construct(string $f, int $a, string $g, string $l)
     {
@@ -13,7 +14,7 @@ class cPersoon extends cClubInfo
         $this->lastname = $l;
         $this->age = $a;
         $this->gender = $g;
-
+        $this->fullname = $this->getFullName();
     }
 
 
@@ -21,6 +22,9 @@ class cPersoon extends cClubInfo
     {
         return sprintf("%s %s",$this->firstName,$this->lastname);
     }
+
+
+
 
     public function doVoorZichUitStaren($time) {
         $energy = null;
